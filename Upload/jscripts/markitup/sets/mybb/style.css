@@ -1,0 +1,210 @@
+/**
+ * This file is part of markItUp! for MyBB.
+ * Copyright (C) 2015 StefanT (https://www.mybb.de)
+ * https://github.com/Stefan-ST/MyBB-Markitup
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+.mybbeditor ul a {
+    background-image: url(icons.png);
+}
+.mybbeditor ul ul a {
+	margin: 0;
+}
+.mybbeditor ul ul {
+	border-bottom: 0;
+}
+.mybbeditor .markItUpButton1 a	{
+}
+.mybbeditor .markItUpButton2 a	{
+	background-position:  0px -22px;
+}
+.mybbeditor .markItUpButton3 a	{
+	background-position:  0px -44px;
+}
+.mybbeditor .markItUpButton4 a	{
+	background-position:  0px -66px;
+}
+.mybbeditor .markItUpButton5 a	{
+	background-position:  0px -88px;
+}
+.mybbeditor .markItUpButton6 a	{
+	background-position:  0px -110px;
+}
+.mybbeditor .markItUpButton7 a	{
+	background-position:  0px -132px;
+}
+.mybbeditor .markItUpButton8 a	{
+	background-position:  0px -154px;
+}
+.mybbeditor .markItUpButton8 ul a	{
+	background: transparent;
+	padding: 5px;
+}
+.mybbeditor .markItUpButton8 .arial	{
+	font-family: Arial;
+}
+.mybbeditor .markItUpButton8 .arial_black	{
+	font-family: Arial Black;
+}
+.mybbeditor .markItUpButton8 .comic_sans_ms	{
+	font-family: Comic Sans MS;
+}
+.mybbeditor .markItUpButton8 .courier_new	{
+	font-family: Courier New;
+}
+.mybbeditor .markItUpButton8 .georgia	{
+	font-family: Georgia;
+}
+.mybbeditor .markItUpButton8 .impact	{
+	font-family: Impact;
+}
+.mybbeditor .markItUpButton8 .sans_serif	{
+	font-family: Sans.serif;
+}
+.mybbeditor .markItUpButton8 .serif	{
+	font-family: Serif;
+}
+.mybbeditor .markItUpButton8 .times_new_roman	{
+	font-family: Times New Roman;
+}
+.mybbeditor .markItUpButton8 .trebuchet_ms	{
+	font-family: Trebuchet MS;
+}
+.mybbeditor .markItUpButton8 .verdana	{
+	font-family: Verdana;
+}
+.mybbeditor .markItUpButton9 a	{
+	background-position:  0px -176px;
+}
+.mybbeditor .markItUpButton9 ul a	{
+	background: transparent;
+	padding: 5px;
+	height: auto;
+	width: 150px;
+}
+.mybbeditor .markItUpButton9 .size1	{
+	font-size: xx-small;
+}
+.mybbeditor .markItUpButton9 .size2	{
+	font-size: x-small;
+}
+.mybbeditor .markItUpButton9 .size3	{
+	font-size: small;
+}
+.mybbeditor .markItUpButton9 .size4	{
+	font-size: medium;
+}
+.mybbeditor .markItUpButton9 .size5	{
+	font-size: large;
+}
+.mybbeditor .markItUpButton9 .size6	{
+	font-size: x-large;
+}
+.mybbeditor .markItUpButton9 .size7	{
+	font-size: xx-large;
+}
+.mybbeditor .markItUpButton10 a {
+	background-position:  0px -198px;
+}
+.mybbeditor .markItUpButton10 ul {
+	width:81px;
+	padding:1px;	
+}
+.mybbeditor .markItUpButton10  li {
+	border:1px solid white;
+	width:25px;	height:25px;
+	overflow:hidden;
+	padding:0px; margin:0px;
+	float:left;
+}
+.mybbeditor .markItUpButton10 ul {
+	border-bottom: 1px solid #000;
+}
+.mybbeditor .markItUpButton10 ul a {
+	width:25px;
+	height:25px;
+}
+.mybbeditor .markItUpButton10 ul a:hover {
+	background-color:none;
+}
+.mybbeditor .markItUpButton10 .col1-1 a {
+	background:yellow;
+}
+.mybbeditor .markItUpButton10 .col1-2 a {
+	background:orange;
+}
+.mybbeditor .markItUpButton10 .col1-3 a {
+	background:red;
+}
+
+.mybbeditor .markItUpButton10 .col2-1 a {
+	background:blue;
+}
+.mybbeditor .markItUpButton10 .col2-2 a {
+	background:purple;
+}
+.mybbeditor .markItUpButton10 .col2-3 a {
+	background:green;
+}
+
+.mybbeditor .markItUpButton10 .col3-1 a {
+	background:white;
+}
+.mybbeditor .markItUpButton10 .col3-2 a {
+	background:gray;
+}
+.mybbeditor .markItUpButton10 .col3-3 a {
+	background:black;
+}
+.mybbeditor .markItUpButton11 a {
+	background-position:  0px -220px;
+}
+.mybbeditor .markItUpButton12 a {
+	background-position:  0px -242px;
+}
+.mybbeditor .markItUpButton13 a {
+	background-position:  0px -264px;
+}
+.mybbeditor .markItUpButton14 a {
+	background-position:  0px -286px;
+}
+.mybbeditor .markItUpButton14.markItUpDropMenu {
+	background: transparent;
+}
+.mybbeditor .markItUpButton14 ul a	{
+	background: transparent;
+	padding: 5px;
+	height: auto;
+}
+.mybbeditor .markItUpButton15 a {
+	background-position:  0px -308px;
+}
+.mybbeditor .markItUpButton16 a {
+	background-position:  0px -330px;
+}
+.mybbeditor .markItUpButton17 a {
+	background-position:  0px -352px;
+}
+.mybbeditor .markItUpButton18 a {
+	background-position:  0px -374px;
+}
+.mybbeditor .markItUpButton19 a {
+	background-position:  0px -396px;
+}
+form #message {
+	width: 690px;
+	font-family: "Verdana", "Arial", "Helvetica", sans-serif;
+}
