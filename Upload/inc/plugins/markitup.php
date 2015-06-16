@@ -89,7 +89,7 @@ $(document).ready(function() {
 var markitup_instance = \'#{$bind}\';
 </script>'),
 		'version' => 1,
-		'sid' => -2,
+		'sid' => -1,
 		'dateline' => TIME_NOW
 	);
 	$db->insert_query('templates', $template);
