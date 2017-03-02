@@ -62,7 +62,7 @@ function markitup_info()
 		'website'		=> 'https://www.mybb.de',
 		'author'		=> 'StefanT',
 		'authorsite'	=> 'https://www.mybb.de',
-		'version'		=> '1.0',
+		'version'		=> '1.1',
 		'compatibility'	=> '18*',
 		'codename'		=> 'markitup'
 	);
@@ -97,7 +97,7 @@ var markitup_instance = \'#{$bind}\';
 	require_once MYBB_ROOT.'inc/adminfunctions_templates.php';
 
 	find_replace_templatesets('smilie', '#'.preg_quote('{$onclick}').'#', ' onclick="$.markItUp({target:markitup_instance,replaceWith:\'{$find}{$smilie_insert}\'});$.modal.close()"');
-	find_replace_templatesets('post_attachments_attachment_postinsert', '#'.preg_quote('$(\'#message\').sceditor(\'instance\').insertText(\'[attachment={$attachment[\'aid\']}]\');', '#').'#', '$.markItUp({replaceWith:\'[attachment={$attachment[\'aid\']}]\'})');
+	find_replace_templatesets('post_attachments_attachment_postinsert', '#'.preg_quote('$(\'#message\').sceditor(\'instance\').insertText(\'[attachment={$attachment[\'aid\']}]\');', '#').'#', '$.markItUp({replaceWith:\'[attachment={$attachment[\'aid\']}]\'});');
 }
 
 function markitup_deactivate()
@@ -109,7 +109,7 @@ function markitup_deactivate()
 	require_once MYBB_ROOT.'inc/adminfunctions_templates.php';
 	
 	find_replace_templatesets('smilie', '#'.preg_quote(' onclick="$.markItUp({target:markitup_instance,replaceWith:\'{$find}{$smilie_insert}\'});$.modal.close()"').'#', '{$onclick}');
-	find_replace_templatesets('post_attachments_attachment_postinsert', '#'.preg_quote('$.markItUp({replaceWith:\'[attachment={$attachment[\'aid\']}]\'})').'#', '$(\'#message\').sceditor(\'instance\').insertText(\'[attachment={$attachment[\'aid\']}]\');');
+	find_replace_templatesets('post_attachments_attachment_postinsert', '#'.preg_quote('$.markItUp({replaceWith:\'[attachment={$attachment[\'aid\']}]\'});').'#', '$(\'#message\').sceditor(\'instance\').insertText(\'[attachment={$attachment[\'aid\']}]\');');
 }
 
 function markitup_run()
