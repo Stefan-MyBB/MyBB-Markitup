@@ -50,6 +50,7 @@ $plugins->add_hook('newthread_end', 'markitup_run');
 $plugins->add_hook('private_send_end', 'markitup_run');
 $plugins->add_hook('usercp_editsig_end', 'markitup_run_signature');
 $plugins->add_hook('warnings_warn_end', 'markitup_run');
+$plugins->add_hook('pre_output_page', 'markitup_smilies');
 
 function markitup_info()
 {
@@ -62,7 +63,7 @@ function markitup_info()
 		'website'		=> 'https://www.mybb.de',
 		'author'		=> 'StefanT',
 		'authorsite'	=> 'https://www.mybb.de',
-		'version'		=> '1.1',
+		'version'		=> '1.2',
 		'compatibility'	=> '18*',
 		'codename'		=> 'markitup'
 	);
@@ -96,7 +97,6 @@ var markitup_instance = \'#{$bind}\';
 
 	require_once MYBB_ROOT.'inc/adminfunctions_templates.php';
 
-	find_replace_templatesets('smilie', '#'.preg_quote('{$onclick}').'#', ' onclick="$.markItUp({target:markitup_instance,replaceWith:\'{$find}{$smilie_insert}\'});$.modal.close()"');
 	find_replace_templatesets('post_attachments_attachment_postinsert', '#'.preg_quote('$(\'#message\').sceditor(\'instance\').insertText(\'[attachment={$attachment[\'aid\']}]\');', '#').'#', '$.markItUp({replaceWith:\'[attachment={$attachment[\'aid\']}]\'});');
 }
 
@@ -108,7 +108,6 @@ function markitup_deactivate()
 
 	require_once MYBB_ROOT.'inc/adminfunctions_templates.php';
 	
-	find_replace_templatesets('smilie', '#'.preg_quote(' onclick="$.markItUp({target:markitup_instance,replaceWith:\'{$find}{$smilie_insert}\'});$.modal.close()"').'#', '{$onclick}');
 	find_replace_templatesets('post_attachments_attachment_postinsert', '#'.preg_quote('$.markItUp({replaceWith:\'[attachment={$attachment[\'aid\']}]\'});').'#', '$(\'#message\').sceditor(\'instance\').insertText(\'[attachment={$attachment[\'aid\']}]\');');
 }
 
@@ -116,10 +115,12 @@ function markitup_run()
 {
 	markitup_run_build('message');
 }
+
 function markitup_run_signature()
 {
 	markitup_run_build('signature');
 }
+
 function markitup_run_build($bind='message')
 {
 	global $mybb, $codebuttons, $templates, $lang;
@@ -187,4 +188,9 @@ function markitup_run_build($bind='message')
 		$markitup_language .= "};";
 		eval("\$codebuttons = \"".$templates->get("markitup")."\";");
 	}
+}
+
+function markitup_smilies($contents)
+{
+	return preg_replace('#(<img.+onclick=")MyBBEditor.insertText\(\' (.+) \'\)(;".+/>)#', '$1$.markItUp({target:markitup_instance,replaceWith:\'$2\'});$.modal.close()$3', $contents);
 }
